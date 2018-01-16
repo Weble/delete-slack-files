@@ -1,0 +1,53 @@
+{
+    "name": "webleit/delete-slack-files",
+    "type": "library",
+    "description": "Console command to delete files from your slack team",
+    "version": "1.0.0",
+    "require": {
+        "symfony/console": "^4.0",
+        "guzzlehttp/guzzle": "~6.0",
+        "php" : "~7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : ">=6.5.5",
+        "squizlabs/php_codesniffer": "^2.3"
+    },
+    "keywords": [
+        "Slack",
+        "Slack Files",
+        "Delete Slack Files"
+    ],
+    "homepage": "https://github.com/webleit/delete-slack-files",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Webleit\\DeleteSlackFiles\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Weblet\\DeleteSlackFiles\\": "tests"
+        }
+    },
+    "authors": [
+        {
+            "name": "Daniele Rosario",
+            "email": "daniele@weble.it",
+            "homepage": "https://www.weble.it",
+            "role": "Developer"
+        }
+    ],
+    "extra": {
+        "branch-alias": {
+            "dev-master": "master"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "phpunit",
+        "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
+        "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+    }
+}
